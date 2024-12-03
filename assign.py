@@ -13,7 +13,7 @@ def load_topics(filename):
 
 def clean_text(text):
     """Remove punctuation and convert text to lowercase."""
-    return re.sub(r"[^ws]", '', text).lower()
+    return re.sub(r"^[ws]", '', text).lower()
 
 def find_relevant_quotes(quotes, topics):
     """Find and return relevant quotes based on topics."""
